@@ -1,0 +1,45 @@
+{
+  "name": "@saorg/decor",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "description": "A tiny subset of decorator helpers for personal use",
+  "typings": "dist/index.d.ts",
+  "author": "Shlomi Assaf <shlomiasaf@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shlomiassaf/decor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shlomiassaf/decor/issues"
+  },
+  "homepage": "https://github.com/shlomiassaf/decor#readme",
+  "scripts": {
+    "clean": "./node_modules/.bin/rimraf dist",
+    "build": "npm run clean && ./node_modules/.bin/tsc",
+    "watch": "npm run clean && ./node_modules/.bin/tsc --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.5",
+    "jest": "^21.2.1",
+    "rimraf": "^2.6.2",
+    "ts-jest": "^21.1.4",
+    "typescript": "^2.6.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/test/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
+  }
+}
